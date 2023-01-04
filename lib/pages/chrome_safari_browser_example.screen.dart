@@ -32,19 +32,20 @@ class _ChromeSafariBrowserExampleScreenState
     extends State<ChromeSafariBrowserExampleScreen> {
   launchWeb() async {
     await widget.browser.open(
-        url: Uri.parse(
-            "https://go.drivi.com.do/login/?redirect_to=https%3A%2F%2Fgo.drivi.com.do%2F"),
-        options: ChromeSafariBrowserClassOptions(
-            android: AndroidChromeCustomTabsOptions(
-                enableUrlBarHiding: true,
-                isSingleInstance: false,
-                isTrustedWebActivity: true,
-                showTitle: false,
-                keepAliveEnabled: true),
-            ios: IOSSafariOptions(
-                dismissButtonStyle: IOSSafariDismissButtonStyle.CLOSE,
-                presentationStyle:
-                    IOSUIModalPresentationStyle.OVER_FULL_SCREEN)));
+      url: Uri.parse(
+          "https://go.drivi.com.do/login/?redirect_to=https%3A%2F%2Fgo.drivi.com.do%2F"),
+      options: ChromeSafariBrowserClassOptions(
+        android: AndroidChromeCustomTabsOptions(
+            enableUrlBarHiding: true,
+            isSingleInstance: false,
+            isTrustedWebActivity: true,
+            showTitle: false,
+            keepAliveEnabled: true),
+        ios: IOSSafariOptions(
+            dismissButtonStyle: IOSSafariDismissButtonStyle.CLOSE,
+            presentationStyle: IOSUIModalPresentationStyle.OVER_FULL_SCREEN),
+      ),
+    );
   }
 
   @override

@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:drivi/pages/chrome_safari_browser_example.screen.dart';
+import 'package:drivi/pages/headless_in_app_webview.dart';
+import 'package:drivi/pages/in_app_browser.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -91,7 +93,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(initialRoute: '/', routes: {
-      '/': (context) => ChromeSafariBrowserExampleScreen(),
+      '/': (context) => InAppBrowserExampleScreen(),
     });
   }
 }
