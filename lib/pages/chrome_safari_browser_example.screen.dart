@@ -38,6 +38,7 @@ class _ChromeSafariBrowserExampleScreenState
             android: AndroidChromeCustomTabsOptions(
                 enableUrlBarHiding: true,
                 isSingleInstance: false,
+                isTrustedWebActivity: true,
                 showTitle: false,
                 keepAliveEnabled: true),
             ios: IOSSafariOptions(
@@ -78,8 +79,8 @@ class _ChromeSafariBrowserExampleScreenState
             width: double.infinity,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/drivi.jpg"),
-                  fit: BoxFit.cover),
+                  image: AssetImage("assets/images/drivi.png"),
+                  fit: BoxFit.fitWidth),
             ),
             child: CircularProgressIndicator()),
       ),
